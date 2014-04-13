@@ -18,5 +18,5 @@ User can then click through to an individual node.
 
 ### Conferences (/conferences)
 
-A node queue view that lists all nodes of type conference.
+A node queue view that accepts nodes of type conference.
 
