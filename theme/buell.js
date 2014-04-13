@@ -10,7 +10,7 @@ $(document).ready(function() {
 		//console.log("cookie is confused");
 		// show the menu
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
-  	$("div.view-id-research_programs").show();
+  	$("div.view-display-id-block_1").show();
 		document.cookie = "buellcenter-org-menu" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 		//console.log('wiped cookie');
 		//console.log(document.cookie);
@@ -20,6 +20,9 @@ $(document).ready(function() {
 
 	$("#block-views-research_programs-block_1 h2").html(
 		"<a href=\"#\" id=\"rp_showhide\">Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span></a>");
+
+	$("#block-views-research_programs-block_2 h2").html(
+		"<a href=\"#\" id=\"conf_showhide\">Conferences <span style=\"font-weight: normal;\">[ - ]</span></a>");
 
 
 	$('a.show-conf').bind('click', function() {
@@ -63,8 +66,11 @@ $(document).ready(function() {
 		(window.location.pathname == "/contact")) {
 		$("#about-submenu").show();
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
-		$("div.view-id-research_programs").hide();
+		$("div.view-display-id-block_1").hide();
 		setMenuStatus("hidden");
+
+		$("#conf_showhide").html("Conferences <span style=\"font-weight: normal;\">[ + ]</span>");
+
 		//console.log('modified cookie due to about or subsections');
 		//console.log('cookie now is ' + document.cookie);
 	}
@@ -77,17 +83,17 @@ $(document).ready(function() {
 	// show hide menu based on cookie
 	if (getMenuStatus() == "hidden") {
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
-  	$("div.view-id-research_programs").hide();
+  	$("div.view-display-id-block_1").hide();
   	//console.log("status was hidden so done hiding menu");
 	} else if (getMenuStatus() == "showing") {
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
-  	$("div.view-id-research_programs").show();
+  	$("div.view-display-id-block_1").show();
   	//console.log("status was showing so done showing menu");
 	} else {
 		// no status found yet so show it and set it
 		//console.log('status not found ! - showing');
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
-  	$("div.view-id-research_programs").show();
+  	$("div.view-display-id-block_1").show();
   	setMenuStatus("showing");
 	}
 	//console.log("processed status = it is now " + getMenuStatus());
@@ -101,18 +107,18 @@ $(document).ready(function() {
 		if (getMenuStatus() == "hidden") {
 			//console.log("hiding so switching to show");
 			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
-  		$("div.view-id-research_programs").show();
+  		$("div.view-display-id-block_1").show();
   		setMenuStatus("showing");
 		} else if (getMenuStatus() == "showing") {
 			//console.log("showing so switch to hide");
 			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
-  		$("div.view-id-research_programs").hide();
+  		$("div.view-display-id-block_1").hide();
   		setMenuStatus("hidden");
 		} else {
 			// a click registered but no cookie yet - this should not be possible
 			// set it to showing
 			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
-  		$("div.view-id-research_programs").show();
+  		$("div.view-display-id-block_1").show();
   		setMenuStatus("showing");
   		//console.log('no status - set to show');
 
@@ -120,6 +126,21 @@ $(document).ready(function() {
 		//console.log('done click = status is now ' + getMenuStatus());
 		//console.log(document.cookie);
   });
+
+
+
+	// click events
+	$('#conf_showhide').bind("click", function() {
+
+		if( $("div.view-display-id-block_2:visible").length > 0 ){
+			$("#conf_showhide").html("Conferences <span style=\"font-weight: normal;\">[ + ]</span>");
+		}else{
+			$("#conf_showhide").html("Conferences <span style=\"font-weight: normal;\">[ - ]</span>");
+		}
+
+		$("div.view-display-id-block_2").toggle();
+	});
+
 
 }); // end doc loop
 
