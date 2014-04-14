@@ -20,3 +20,6 @@ User can then click through to an individual node.
 
 A node queue view that accepts nodes of type conference.
 
+## NOTES
+
+http://www.buellcenter.org/admin/build/path/pathauto

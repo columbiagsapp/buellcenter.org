@@ -638,7 +638,8 @@ color: #000000;
 }
 
 html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node,
-.list-page .views-row {
+.list-page .views-row,
+.taxonomy-term-page .views-row {
   margin-bottom: 40px;
 }
 
