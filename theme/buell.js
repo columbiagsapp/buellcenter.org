@@ -21,8 +21,10 @@ $(document).ready(function() {
 	$("#block-views-research_programs-block_1 h2").html(
 		"<a href=\"#\" id=\"rp_showhide\">Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span></a>");
 
+	$("div.view-display-id-block_2").hide();
+
 	$("#block-views-research_programs-block_2 h2").html(
-		"<a href=\"#\" id=\"conf_showhide\">Conferences <span style=\"font-weight: normal;\">[ - ]</span></a>");
+		"<a href=\"#\" id=\"conf_showhide\">Conferences <span style=\"font-weight: normal;\">[ + ]</span></a>");
 
 
 	$('a.show-conf').bind('click', function() {
