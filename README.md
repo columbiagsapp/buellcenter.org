@@ -12,7 +12,7 @@ Any type of content, organized by a node queue
 
 Menu is made up of all taxonomy items from the Research and Programs vocabulary (defined by a view that creates a block that is set to the left sidebar).
 
-Menu clicks through to a custom content type with a tpl.php template that lists all the Research and Programs nodes in the chosen taxonomy in reverse chronological order.
+`listing_by_taxonomy` view is used by taxonomy_term_page.tpl.php to collect the view elements for a taxonomy based listing (eg. a type of Research and Program item).
 
 User can then click through to an individual node.
 
