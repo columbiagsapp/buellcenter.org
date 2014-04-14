@@ -23,11 +23,12 @@ $(document).ready(function() {
 
 	if(window.location.pathname.split('/')[1] != 'conferences'){
 		$("div.view-display-id-block_2").hide();
-	}
-
-	$("#block-views-research_programs-block_2 h2").html(
+		$("#block-views-research_programs-block_2 h2").html(
+		"<a href=\"#\" id=\"conf_showhide\">Conferences <span style=\"font-weight: normal;\">[ - ]</span></a>");
+	}else{
+		$("#block-views-research_programs-block_2 h2").html(
 		"<a href=\"#\" id=\"conf_showhide\">Conferences <span style=\"font-weight: normal;\">[ + ]</span></a>");
-
+	}
 
 	$('a.show-conf').bind('click', function() {
 		// find element to show
