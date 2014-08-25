@@ -50,7 +50,11 @@
     
     print '<strong>' . $title . '</strong>';
     print $node->field_rd_teaser_text[0]['view'] . '<br/>';
-    print $node->field_conf_description[0]['view'];
+    print $node->field_conf_description[0]['value'];
+
+    //dsm($node->field_conf_description);
+
+    //print_r($node->field_conf_description[0]);
 
 
 		$additional_images = $node->field_rd_add_images;

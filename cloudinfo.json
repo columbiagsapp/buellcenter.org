@@ -1,0 +1,22 @@
+{
+    "name": "Buell Center",
+    "url": "buellcenter.org",
+    "version": "1.2",
+    "thumbnail": "screenshot.png",
+    "contributors": [
+        {
+            "name": "Troy Conrad Therrien",
+            "username": "troyth",
+            "role": "maintainer"
+        },
+        {
+            "name": "Jochen Hartmann",
+            "username": "vomc",
+            "role": "developer"
+        }
+
+    ],
+    "dependencies": [
+
+    ]
+}
